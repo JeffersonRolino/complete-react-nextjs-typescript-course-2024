@@ -24,14 +24,7 @@ const BookList = () => {
             <h1>Fantasy Books</h1>
             <section className="book-list">
                 {books.map((book) => {
-                    return (
-                        <Book
-                            key={book.id}
-                            image={book.image}
-                            title={book.title}
-                            author={book.author}
-                        />
-                    );
+                    return <Book book={book} key={book.id} />;
                 })}
             </section>
         </div>
@@ -39,7 +32,9 @@ const BookList = () => {
 };
 
 // Book Component
-function Book({ image, title, author }) {
+function Book({ book }) {
+    const { image, title, author } = book;
+    console.log(book);
     return (
         <article className="book">
             <img src={image} alt="book cover" />
