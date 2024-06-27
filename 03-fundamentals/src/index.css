@@ -50,3 +50,17 @@ body {
     color: #8f806b;
     font-size: 1rem;
 }
+
+.book button {
+    background-color: #e0d0b3;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.book button:hover {
+    background-color: #d17938;
+}

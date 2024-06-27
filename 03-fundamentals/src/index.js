@@ -24,7 +24,9 @@ const BookList = () => {
                     image={firstBook.image}
                     title={firstBook.title}
                     author={firstBook.author}
-                />
+                >
+                    <button>Buy Now</button>
+                </Book>
                 <Book
                     image={secondBook.image}
                     title={secondBook.title}
@@ -36,12 +38,13 @@ const BookList = () => {
 };
 
 // Book Component
-function Book({ image, title, author }) {
+function Book({ image, title, author, children }) {
     return (
         <article className="book">
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
+            {children}
         </article>
     );
 }
