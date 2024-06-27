@@ -20,7 +20,7 @@ const BookList = () => {
 
 const Image = () => (
     <img
-        src="http://georgerrmartin.com/gallery/coverart/GOThcEng.jpg"
+        src="./images/a-clash-of-kings.jpg"
         alt="Game of Thrones book cover"
     ></img>
 );
