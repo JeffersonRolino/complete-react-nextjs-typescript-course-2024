@@ -19,31 +19,15 @@ const BookList = () => {
     );
 };
 
-// Image Component
-const Image = () => (
-    <img
-        src="./images/a-clash-of-kings.jpg"
-        alt="Game of Thrones book cover"
-    ></img>
-);
-
-// Title Component
-const Title = () => <h2>A Game of Thrones</h2>;
-
-// Author Component
-const Author = () => (
-    <h4 style={{ color: "#8f806b", fontSize: "1rem", marginTop: "0.5rem" }}>
-        George R. R. Martin
-    </h4>
-);
-
 // Book Component
 function Book() {
+    const title = "A Clash of Kings";
+    const author = "George R. R. Martin";
     return (
         <article className="book">
-            <Image />
-            <Title />
-            <Author />
+            <img src="./images/a-clash-of-kings.jpg" alt="book cover" />
+            <h2>{title}</h2>
+            <h4>{author}</h4>
         </article>
     );
 }

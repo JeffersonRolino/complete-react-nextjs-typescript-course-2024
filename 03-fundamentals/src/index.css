@@ -46,6 +46,7 @@ body {
     font-size: 1.6rem;
 }
 
-/* .book h4 {
+.book h4 {
     color: #8f806b;
-} */
+    font-size: 1rem;
+}
