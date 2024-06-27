@@ -19,36 +19,27 @@ const books = [
 
 // BookList Component
 const BookList = () => {
-    const handleFormInput = (e) => {
-        console.log(e.target);
-        console.log(e.target.name);
-        console.log(e.target.value);
-        console.log("You are searching from a book...");
-    };
-
-    const handleFormSubmission = (e) => {
-        e.preventDefault();
-        console.log("Form sumitted");
-    };
+    // const handleFormSubmission = (e) => {
+    //     e.preventDefault();
+    //     console.log("Form sumitted");
+    // };
 
     return (
         <div className="container">
             <h1>Fantasy Books</h1>
-            <form onSubmit={handleFormSubmission}>
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    console.log("Form submitted");
+                }}
+            >
                 <input
                     type="text"
                     name="search"
                     placeholder="Search..."
-                    onChange={handleFormInput}
+                    onChange={() => console.log("Form changed...")}
                 />
                 <button type="submit">Submit</button>
-                <button
-                    type="button"
-                    style={{ marginLeft: "16px", backgroundColor: "#d41971" }}
-                    onClick={handleFormInput}
-                >
-                    Don't Submit
-                </button>
             </form>
             <section className="book-list">
                 {books.map((book) => {
