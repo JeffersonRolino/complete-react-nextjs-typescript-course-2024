@@ -41,7 +41,14 @@ const BookList = () => {
                     placeholder="Search..."
                     onChange={handleFormInput}
                 />
-                <button type="submit">Search</button>
+                <button type="submit">Submit</button>
+                <button
+                    type="button"
+                    style={{ marginLeft: "16px", backgroundColor: "#d41971" }}
+                    onClick={handleFormInput}
+                >
+                    Don't Submit
+                </button>
             </form>
             <section className="book-list">
                 {books.map((book) => {
