@@ -36,13 +36,12 @@ const BookList = () => {
 };
 
 // Book Component
-function Book(props) {
-    console.log(props);
+function Book({ image, title, author }) {
     return (
         <article className="book">
-            <img src={props.image} alt="book cover" />
-            <h2>{props.title}</h2>
-            <h4>{props.author}</h4>
+            <img src={image} alt="book cover" />
+            <h2>{title}</h2>
+            <h4>{author}</h4>
         </article>
     );
 }
