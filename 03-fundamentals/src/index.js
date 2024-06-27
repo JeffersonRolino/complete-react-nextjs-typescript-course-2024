@@ -2,32 +2,35 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+const title = "A Clash of Kings";
+const author = "George R. R. Martin";
+const image = "./images/a-clash-of-kings.jpg";
+
 // BookList Component
 const BookList = () => {
     return (
         <div className="container">
             <h1>Fantasy Books</h1>
             <section className="book-list">
-                <Book />
-                <Book />
-                <Book />
-                <Book />
-                <Book />
-                <Book />
+                <Book image={image} title={title} author={author} />
+                <Book image={image} title={title} author={author} />
+                <Book image={image} title={title} author={author} />
+                <Book image={image} title={title} author={author} />
+                <Book image={image} title={title} author={author} />
+                <Book image={image} title={title} author={author} />
             </section>
         </div>
     );
 };
 
 // Book Component
-function Book() {
-    const title = "A Clash of Kings";
-    const author = "George R. R. Martin";
+function Book(props) {
+    console.log(props);
     return (
         <article className="book">
-            <img src="./images/a-clash-of-kings.jpg" alt="book cover" />
-            <h2>{title}</h2>
-            <h4>{author}</h4>
+            <img src={props.image} alt="book cover" />
+            <h2>{props.title}</h2>
+            <h4>{props.author}</h4>
         </article>
     );
 }
