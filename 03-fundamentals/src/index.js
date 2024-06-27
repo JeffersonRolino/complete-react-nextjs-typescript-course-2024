@@ -19,9 +19,20 @@ const books = [
 
 // BookList Component
 const BookList = () => {
+    const handleFormInput = () => {
+        console.log("You are searching from a book...");
+    };
+
     return (
         <div className="container">
             <h1>Fantasy Books</h1>
+            <div className="search-wrapper">
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    onChange={handleFormInput}
+                />
+            </div>
             <section className="book-list">
                 {books.map((book) => {
                     return <Book book={book} key={book.id} />;
@@ -34,12 +45,17 @@ const BookList = () => {
 // Book Component
 function Book({ book }) {
     const { image, title, author } = book;
-    console.log(book);
+
+    const handleClick = () => {
+        console.log(`${title} from ${author} was added to Cart`);
+    };
+
     return (
         <article className="book">
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
+            <button onClick={handleClick}>Add to Cart</button>
         </article>
     );
 }
