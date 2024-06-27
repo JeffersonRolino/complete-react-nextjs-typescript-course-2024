@@ -31,18 +31,28 @@ body {
     gap: 2rem;
 }
 
-.search-wrapper {
+.container form {
     width: 100%;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     padding: 1.4rem;
 }
 
-.search-wrapper input {
+.container form input {
     height: 32px;
     min-width: 254px;
-    margin: 0 auto;
     padding: 8px;
+    border: none;
+}
+
+.container form button {
+    padding: 0 1rem;
+    border: none;
+    background-color: #e0d0b3;
+}
+
+.container form button:hover {
+    background-color: #d17938;
 }
 
 .book {

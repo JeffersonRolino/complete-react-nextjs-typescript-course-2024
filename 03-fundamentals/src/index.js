@@ -19,20 +19,30 @@ const books = [
 
 // BookList Component
 const BookList = () => {
-    const handleFormInput = () => {
+    const handleFormInput = (e) => {
+        console.log(e.target);
+        console.log(e.target.name);
+        console.log(e.target.value);
         console.log("You are searching from a book...");
+    };
+
+    const handleFormSubmission = (e) => {
+        e.preventDefault();
+        console.log("Form sumitted");
     };
 
     return (
         <div className="container">
             <h1>Fantasy Books</h1>
-            <div className="search-wrapper">
+            <form onSubmit={handleFormSubmission}>
                 <input
                     type="text"
+                    name="search"
                     placeholder="Search..."
                     onChange={handleFormInput}
                 />
-            </div>
+                <button type="submit">Search</button>
+            </form>
             <section className="book-list">
                 {books.map((book) => {
                     return <Book book={book} key={book.id} />;
