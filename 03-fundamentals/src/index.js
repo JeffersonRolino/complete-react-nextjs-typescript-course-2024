@@ -19,6 +19,11 @@ const books = [
 
 // BookList Component
 const BookList = () => {
+    const someValue = "shakeAndBake";
+    const displayValue = () => {
+        console.log(someValue);
+    };
+
     // const handleFormSubmission = (e) => {
     //     e.preventDefault();
     //     console.log("Form sumitted");
@@ -43,7 +48,13 @@ const BookList = () => {
             </form>
             <section className="book-list">
                 {books.map((book) => {
-                    return <Book book={book} key={book.id} />;
+                    return (
+                        <Book
+                            book={book}
+                            key={book.id}
+                            displayValue={displayValue}
+                        />
+                    );
                 })}
             </section>
         </div>
@@ -51,7 +62,7 @@ const BookList = () => {
 };
 
 // Book Component
-function Book({ book }) {
+function Book({ book, displayValue }) {
     const { image, title, author } = book;
 
     const handleClick = () => {
@@ -63,7 +74,7 @@ function Book({ book }) {
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            <button onClick={handleClick}>Add to Cart</button>
+            <button onClick={displayValue}>Add to Cart</button>
         </article>
     );
 }
