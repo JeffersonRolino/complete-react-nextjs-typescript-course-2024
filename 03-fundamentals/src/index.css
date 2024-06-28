@@ -49,6 +49,7 @@ body {
     padding: 0 1rem;
     border: none;
     background-color: #e0d0b3;
+    cursor: pointer;
 }
 
 .container form button:hover {
@@ -60,6 +61,7 @@ body {
     border-radius: 0.5rem;
     padding: 2rem;
     text-align: center;
+    position: relative;
 }
 
 .book img {
@@ -81,12 +83,30 @@ body {
     background-color: #e0d0b3;
     padding: 0.6rem 0.8rem;
     font-size: 0.8rem;
-    /* text-transform: uppercase; */
     border: none;
     border-radius: 8px;
     margin-top: 1rem;
+    position: relative;
+    cursor: pointer;
 }
 
 .book button:hover {
     background-color: #d17938;
+}
+
+.position-label {
+    position: absolute;
+    top: 3.4rem;
+    left: 0;
+    display: inline-block;
+    text-align: center;
+    height: 2.4rem;
+    width: 3rem;
+    background-color: #d17938;
+    padding: 0.6rem;
+}
+
+.position-label p {
+    font-weight: 700;
+    font-size: 1rem;
 }
