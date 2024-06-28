@@ -24,7 +24,7 @@ const BookList = () => {
         console.log(book);
     };
 
-    getBook(2);
+    // getBook(2);
 
     return (
         <div className="container">
@@ -45,7 +45,7 @@ const BookList = () => {
             </form>
             <section className="book-list">
                 {books.map((book) => {
-                    return <Book book={book} key={book.id} />;
+                    return <Book book={book} key={book.id} getBook={getBook} />;
                 })}
             </section>
         </div>
@@ -53,19 +53,15 @@ const BookList = () => {
 };
 
 // Book Component
-function Book({ book }) {
-    const { image, title, author } = book;
-
-    const handleClick = () => {
-        console.log(`${title} from ${author} was added to Cart`);
-    };
+function Book({ book, getBook }) {
+    const { id, title, author, image } = book;
 
     return (
         <article className="book">
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            <button onClick={handleClick}>Add to Cart</button>
+            <button onClick={getBook(id)}>Add to Cart</button>
         </article>
     );
 }
