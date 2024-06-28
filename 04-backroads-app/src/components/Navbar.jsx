@@ -1,9 +1,11 @@
+import logo from "../images/logo.svg";
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src="./images/logo.svg" className="nav-logo" alt="backroads" />
+          <img src={logo} className="nav-logo" alt="backroads" />
           <button type="button" className="nav-toggle" id="nav-toggle">
             <i className="fas fa-bars"></i>
           </button>
@@ -44,6 +46,7 @@ function Navbar() {
               href="https://www.twitter.com"
               target="_blank"
               className="nav-icon"
+              rel="noreferrer"
             >
               <i className="fab fa-facebook"></i>
             </a>
@@ -53,6 +56,7 @@ function Navbar() {
               href="https://www.twitter.com"
               target="_blank"
               className="nav-icon"
+              rel="noreferrer"
             >
               <i className="fab fa-twitter"></i>
             </a>
@@ -62,6 +66,7 @@ function Navbar() {
               href="https://www.twitter.com"
               target="_blank"
               className="nav-icon"
+              rel="noreferrer"
             >
               <i className="fab fa-squarespace"></i>
             </a>
