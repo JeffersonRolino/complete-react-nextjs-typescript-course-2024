@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 function Header() {
     return (
         <header>
-            <h1>Fantasy Books</h1>
+            <h1>Fantasy Best Sellers</h1>
             <SearchBar />
         </header>
     );
