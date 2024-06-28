@@ -19,15 +19,12 @@ const books = [
 
 // BookList Component
 const BookList = () => {
-    const someValue = "shakeAndBake";
-    const displayValue = () => {
-        console.log(someValue);
+    const getBook = (id) => {
+        const book = books.find((book) => book.id === id);
+        console.log(book);
     };
 
-    // const handleFormSubmission = (e) => {
-    //     e.preventDefault();
-    //     console.log("Form sumitted");
-    // };
+    getBook(2);
 
     return (
         <div className="container">
@@ -48,13 +45,7 @@ const BookList = () => {
             </form>
             <section className="book-list">
                 {books.map((book) => {
-                    return (
-                        <Book
-                            book={book}
-                            key={book.id}
-                            displayValue={displayValue}
-                        />
-                    );
+                    return <Book book={book} key={book.id} />;
                 })}
             </section>
         </div>
@@ -62,7 +53,7 @@ const BookList = () => {
 };
 
 // Book Component
-function Book({ book, displayValue }) {
+function Book({ book }) {
     const { image, title, author } = book;
 
     const handleClick = () => {
@@ -74,7 +65,7 @@ function Book({ book, displayValue }) {
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            <button onClick={displayValue}>Add to Cart</button>
+            <button onClick={handleClick}>Add to Cart</button>
         </article>
     );
 }
