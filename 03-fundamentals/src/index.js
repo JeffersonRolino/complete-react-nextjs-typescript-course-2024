@@ -61,7 +61,7 @@ function Book({ book, getBook }) {
             <img src={image} alt="book cover" />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            <button onClick={getBook(id)}>Add to Cart</button>
+            <button onClick={() => getBook(id)}>Add to Cart</button>
         </article>
     );
 }
