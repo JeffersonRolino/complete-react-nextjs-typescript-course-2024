@@ -1,5 +1,6 @@
 import logo from "../images/logo.svg";
-import { pageLinks, socialLinks } from "../data";
+import PageLinks from "./PageLinks";
+import SocialLinks from "./SocialLinks";
 
 function Navbar() {
   return (
@@ -11,34 +12,13 @@ function Navbar() {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        <ul className="nav-links" id="nav-links">
-          {pageLinks.map((link) => {
-            return (
-              <li key={link.id}>
-                <a href={link.href} className="nav-link">
-                  {link.text}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <PageLinks
+          ulCssClass="nav-links"
+          ulCssId="nav-links"
+          linkCssClass="nav-link"
+        />
 
-        <ul className="nav-icons">
-          {socialLinks.map((link) => {
-            return (
-              <li key={link.id}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  className="nav-icon"
-                  rel="noreferrer"
-                >
-                  <i className={link.icon}></i>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <SocialLinks ulCssClass="nav-icons" linkCssClass="nav-icon" />
       </div>
     </nav>
   );
