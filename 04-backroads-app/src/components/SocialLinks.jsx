@@ -1,20 +1,17 @@
 import { socialLinks } from "../data";
+import SocialLink from "./SocialLink";
 
 function SocialLinks({ ulCssClass, linkCssClass }) {
   return (
     <ul className={ulCssClass}>
       {socialLinks.map((link) => {
         return (
-          <li key={link.id}>
-            <a
-              href={link.href}
-              target="_blank"
-              className={linkCssClass}
-              rel="noreferrer"
-            >
-              <i className={link.icon}></i>
-            </a>
-          </li>
+          <SocialLink
+            key={link.id}
+            href={link.href}
+            linkCssClass={linkCssClass}
+            icon={link.icon}
+          />
         );
       })}
     </ul>

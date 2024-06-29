@@ -11,8 +11,8 @@ export const pageLinks = [
 ];
 
 export const socialLinks = [
-  { id: 1, href: "https://www.twitter.com", icon: "fab fa-facebook" },
-  { id: 2, href: "https://www.facebook.com", icon: "fab fa-twitter" },
+  { id: 1, href: "https://www.facebook.com", icon: "fab fa-facebook" },
+  { id: 2, href: "https://www.twitter.com", icon: "fab fa-twitter" },
   { id: 3, href: "https://www.squarespace.com", icon: "fab fa-squarespace" },
 ];
 
@@ -49,7 +49,7 @@ export const tours = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.",
     location: "China",
-    days: "6 days",
+    duration: "6 days",
     price: "$2100",
   },
   {
@@ -60,7 +60,7 @@ export const tours = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.",
     location: "Indonesia",
-    days: "11 days",
+    duration: "11 days",
     price: "$1400",
   },
   {
@@ -71,7 +71,7 @@ export const tours = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.",
     location: "China",
-    days: "8 days",
+    duration: "8 days",
     price: "$5000",
   },
   {
@@ -82,7 +82,7 @@ export const tours = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.",
     location: "Kenya",
-    days: "20 days",
-    price: "$3300",
+    duration: "20 days",
+    price: "$6300",
   },
 ];
