@@ -4,8 +4,11 @@ const UseStateGotcha = () => {
   const [counter, setCounter] = useState(0);
 
   const handleClick = () => {
-    setCounter(counter + 1);
-    console.log(counter);
+    setCounter((currentState) => {
+      const newState = currentState + 1;
+      console.log(newState);
+      return newState;
+    });
   };
 
   return (
