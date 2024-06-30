@@ -6,8 +6,8 @@ export const data = [
 ];
 
 export const people = [
-  { id: 1, name: "bob", nickName: "Stud Muffin" },
-  { id: 2, name: "peter" },
+  { id: 1, name: "Bob", nickName: "Stud Muffin" },
+  { id: 2, name: "Peter", nickName: "Pete" },
   {
     id: 3,
     name: "oliver",
