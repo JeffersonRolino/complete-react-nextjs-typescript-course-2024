@@ -11,23 +11,24 @@ const MultipleReturnsFetchData = () => {
     borderRadius: "16px",
   };
 
-  useEffect(() => {
-    async function fetchUser() {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          setIsError(true);
-          setIsLoading(false);
-          return;
-        }
-        const json = await response.json();
-        SetUser(json);
-      } catch (error) {
+  async function fetchUser() {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
         setIsError(true);
-        throw error(`Error: ${error.message()}`);
+        setIsLoading(false);
+        return;
       }
-      setIsLoading(false);
+      const json = await response.json();
+      SetUser(json);
+    } catch (error) {
+      setIsError(true);
+      throw error(`Error: ${error.message()}`);
     }
+    setIsLoading(false);
+  }
+
+  useEffect(() => {
     fetchUser();
   }, []);
 
