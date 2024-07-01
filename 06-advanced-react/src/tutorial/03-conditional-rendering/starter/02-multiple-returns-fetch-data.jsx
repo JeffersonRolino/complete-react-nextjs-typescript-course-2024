@@ -38,12 +38,14 @@ const MultipleReturnsFetchData = () => {
     return <h2>There was an error...</h2>;
   }
 
+  const { avatar_url, name, company, bio } = user;
+
   return (
     <div className="user">
-      <img style={userImageStyle} src={user.avatar_url} alt={user.login} />
-      <h2>{user.login}</h2>
-      <h4>{`Works at ${user.company}`}</h4>
-      <p>{user.bio}</p>
+      <img style={userImageStyle} src={avatar_url} alt={name} />
+      <h2>{name}</h2>
+      <h4>{`Works at ${company}`}</h4>
+      <p>{bio}</p>
     </div>
   );
 };
