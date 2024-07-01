@@ -16,14 +16,11 @@ const CleanupFunction = () => {
 
 const FirstComponent = () => {
   useEffect(() => {
-    console.log("Use Effect Called...");
-    const id = setInterval(() => {
-      console.log("Hello from interval");
-    }, 1000);
-    return () => {
-      clearInterval(id);
-      console.log("Cleanup...");
+    const someFunction = () => {
+      console.log("Function was called...");
     };
+    window.addEventListener("scroll", someFunction);
+    return () => window.removeEventListener("scroll", someFunction);
   }, []);
 
   return <h3>First Component</h3>;
