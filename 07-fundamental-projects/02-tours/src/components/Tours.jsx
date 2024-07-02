@@ -3,7 +3,7 @@ import Tour from "./Tour";
 function Tours({ tours, removeTour }) {
   return (
     <div>
-      <h2>Tours</h2>
+      <h1>Our Tours</h1>
       <div className="title-underline"></div>
       <div className="tours">
         {tours.map((tour) => {
