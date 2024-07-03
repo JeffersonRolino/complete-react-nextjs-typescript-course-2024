@@ -1,6 +1,11 @@
+import avatar from "../../../assets/react.svg";
+
 // eslint-disable-next-line react/prop-types
-function Person({ name, nickName, images }) {
-  const img = images[0].small.url;
+function Person({ name, nickName = "shakeAndBake", images }) {
+  // eslint-disable-next-line react/prop-types
+  const img = images?.[0]?.small?.url ?? avatar;
+
+  // const img = images && images[0] && images[0].small && images[0].small.url;
 
   return (
     <div>
