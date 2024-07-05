@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { data } from "../../../data";
+import { data, people } from "../../../data";
 
 const defaultState = {
   people: data,
@@ -13,6 +13,9 @@ const REMOVE_ITEM = "REMOVE_ITEM";
 const reducer = (state, action) => {
   if (action.type === CLEAR_LIST) {
     return { ...state, people: [] };
+  }
+  if (action.type === RESET_LIST) {
+    return { ...state, people: data };
   }
   throw new Error(`No matching "${action.type}" - action type`);
 };
