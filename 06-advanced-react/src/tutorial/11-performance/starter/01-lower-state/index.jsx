@@ -1,21 +1,27 @@
 import { useState } from "react";
 import { data } from "../../../../data";
 import List from "./List";
+import Counter from "./Counter";
 
 const LowerState = () => {
   const [people, setPeople] = useState(data);
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+
+  const clearList = () => {
+    setPeople([]);
+  };
 
   return (
     <section>
+      <Counter />
+      <List people={people} />
       <button
         className="btn"
-        onClick={() => setCount(count + 1)}
-        style={{ marginBottom: "1rem" }}
+        onClick={clearList}
+        style={{ backgroundColor: "#D21942" }}
       >
-        count {count}
+        Clear List
       </button>
-      <List people={people} />
     </section>
   );
 };
