@@ -422,3 +422,43 @@ ul {
   background-color: var(--red-dark);
   box-shadow: var(--shadow-3);
 }
+
+/* LESSONS 139 and 140: Prop Drilling */
+.context-api-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.context-api-logo {
+  margin: 0;
+  font-weight: 700;
+}
+
+.context-api-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 580px;
+}
+
+.context-api-links-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.context-api-user-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+.context-api-user-container p {
+  margin: 0;
+}
