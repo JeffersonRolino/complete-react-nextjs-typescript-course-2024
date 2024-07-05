@@ -1,6 +1,6 @@
 import UserContainer from "./UserContainer";
 
-function NavLinks({ user, logout, login }) {
+function NavLinks() {
   return (
     <div className="context-api-nav-container">
       <ul className="context-api-links-container">
@@ -11,7 +11,7 @@ function NavLinks({ user, logout, login }) {
           <a href="#">About</a>
         </li>
       </ul>
-      <UserContainer user={user} logout={logout} login={login} />
+      <UserContainer />
     </div>
   );
 }
