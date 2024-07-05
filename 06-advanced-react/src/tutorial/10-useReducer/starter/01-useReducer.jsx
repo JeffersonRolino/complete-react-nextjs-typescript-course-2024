@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { data, people } from "../../../data";
+import { data } from "../../../data";
 
 const defaultState = {
   people: data,
@@ -17,17 +17,20 @@ const reducer = (state, action) => {
   if (action.type === RESET_LIST) {
     return { ...state, people: data };
   }
+  if (action.type === REMOVE_ITEM) {
+    return {
+      ...state,
+      people: state.people.filter((person) => person.id !== action.payload.id),
+    };
+  }
   throw new Error(`No matching "${action.type}" - action type`);
 };
 
 const ReducerBasics = () => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
-  console.log(state);
-
   const removeItem = (id) => {
-    // let newPeople = people.filter((person) => person.id !== id);
-    // setPeople(newPeople);
+    dispatch({ type: REMOVE_ITEM, payload: { id } });
   };
 
   const clearList = () => {
