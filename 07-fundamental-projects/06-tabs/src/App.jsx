@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import JobInfo from "./components/JobInfo";
 
 const url = "https://www.course-api.com/react-tabs-project";
 
@@ -15,9 +16,22 @@ const App = () => {
 
   useEffect(() => {
     fetchJobs();
-    console.log(jobs);
   }, []);
 
-  return <h2>Tabs Starter</h2>;
+  if (isLoading) {
+    return (
+      <section className="jobs-center">
+        <div className="loading"></div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="jobs-center">
+      {/* button container */}
+      {/* job info */}
+      <JobInfo jobs={jobs} />
+    </section>
+  );
 };
 export default App;
