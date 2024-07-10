@@ -3,7 +3,7 @@ import SingleColor from "./SingleColor";
 
 function ColorList({ colors }) {
   return (
-    <section>
+    <section className="colors">
       {colors.map((color, index) => {
         return <SingleColor key={nanoid()} color={color} index={index} />;
       })}
