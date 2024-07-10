@@ -1,0 +1,33 @@
+import { useState } from "react";
+import data from "../data";
+
+function Generator() {
+  const [count, setCount] = useState(1);
+  const [text, setText] = useState([]);
+
+  return (
+    <section className="section-center">
+      <h4>Tired of Boring Lorem Ipsum?</h4>
+      <form className="lorem-form">
+        <label htmlFor="amount">paragraphs:</label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          min="1"
+          max="8"
+          step="1"
+          value={count}
+          onChange={(e) => {
+            setCount(e.target.value);
+          }}
+        />
+        <button className="btn" type="submit">
+          Generate
+        </button>
+      </form>
+    </section>
+  );
+}
+
+export default Generator;

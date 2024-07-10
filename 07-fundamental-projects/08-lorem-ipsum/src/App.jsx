@@ -1,4 +1,6 @@
+import Generator from "./components/Generator";
+
 const App = () => {
-  return <h2>Lorem Ipsum Starter</h2>;
+  return <Generator />;
 };
 export default App;
