@@ -15,7 +15,10 @@ const App = () => {
     setItems([...items, newItem]);
   };
 
-  const removeItem = (itemId) => {};
+  const removeItem = (id) => {
+    const newItems = items.filter((item) => id !== item.id);
+    setItems(newItems);
+  };
 
   return (
     <section className="section-center">
