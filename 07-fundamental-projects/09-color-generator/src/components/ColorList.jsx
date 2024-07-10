@@ -1,8 +1,13 @@
-function ColorList() {
+import { nanoid } from "nanoid";
+import SingleColor from "./SingleColor";
+
+function ColorList({ colors }) {
   return (
-    <div>
-      <h3>Color List</h3>
-    </div>
+    <section>
+      {colors.map((color, index) => {
+        return <SingleColor key={nanoid()} color={color} index={index} />;
+      })}
+    </section>
   );
 }
 
