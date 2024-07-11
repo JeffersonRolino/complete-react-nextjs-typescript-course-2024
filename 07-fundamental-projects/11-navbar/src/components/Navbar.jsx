@@ -15,7 +15,7 @@ function Navbar() {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} alt="logo" className="logo" />
-          <button className="nav-toogle" onClick={toggleLinks}>
+          <button className="nav-toggle" onClick={toggleLinks}>
             <FaBars />
           </button>
         </div>
