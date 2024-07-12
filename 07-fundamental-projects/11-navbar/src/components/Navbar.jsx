@@ -28,6 +28,9 @@ function Navbar() {
           </button>
         </div>
 
+        {/***********************************************************
+         * Main Menu Links
+         ************************************************************/}
         <div
           className="links-container"
           ref={linksContainerRef}
@@ -44,6 +47,20 @@ function Navbar() {
             })}
           </ul>
         </div>
+
+        {/***********************************************************
+         * Social Media Icons
+         ************************************************************/}
+        <ul className="social-icons">
+          {social.map((socialIcon) => {
+            const { id, url, icon } = socialIcon;
+            return (
+              <li key={id}>
+                <a href={url}>{icon}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );
