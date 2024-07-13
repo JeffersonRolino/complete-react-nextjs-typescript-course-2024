@@ -1,14 +1,19 @@
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Submenu from "./components/Submenu";
 import { useGlobalContext } from "./context";
 
 const App = () => {
   const { isSideBarOpen } = useGlobalContext();
 
-  console.log(isSideBarOpen);
-
   return (
-    <div>
-      <h2>App</h2>
-    </div>
+    <main>
+      <Navbar />
+      <Hero />
+      <Sidebar />
+      <Submenu />
+    </main>
   );
 };
 export default App;
