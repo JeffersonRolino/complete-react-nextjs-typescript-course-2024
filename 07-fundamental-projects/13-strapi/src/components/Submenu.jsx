@@ -5,8 +5,6 @@ function Submenu() {
   const { pageId } = useGlobalContext();
   const currentPage = sublinks.find((item) => item.pageId === pageId);
 
-  console.log(currentPage);
-
   return (
     <div className={currentPage ? "submenu show-submenu" : "submenu"}>
       <h5>{currentPage?.page}</h5>
