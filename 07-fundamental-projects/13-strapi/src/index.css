@@ -472,12 +472,14 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: -1;
   }
 
   .show-submenu {
     visibility: visible;
     opacity: 1;
     transform: rotateX(0deg) translate(-50%);
+    z-index: 10;
   }
 
   .submenu h5 {
