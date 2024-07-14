@@ -414,3 +414,36 @@ nav {
     display: none;
   }
 }
+
+/************************************************************************
+* Nav Links
+************************************************************************/
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border: 2px solid violet;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    color: var(--white);
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+    cursor: pointer;
+    border: 2px solid blue;
+  }
+}
