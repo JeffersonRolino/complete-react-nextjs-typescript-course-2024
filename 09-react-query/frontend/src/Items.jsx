@@ -3,15 +3,21 @@ import SingleItem from "./SingleItem";
 import customFetch from "./utils/customInstance";
 
 const Items = ({ items }) => {
-  const result = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["tasks"],
-    queryFn: () => customFetch.get("/"),
+    queryFn: async () => {
+      const { data } = await customFetch.get("/");
+      return data;
+    },
   });
-  console.log(result);
+
+  if (isLoading) {
+    return <p style={{ marginTop: "1rem" }}>Loading...</p>;
+  }
 
   return (
     <div className="items">
-      {items.map((item) => {
+      {data.taskList.map((item) => {
         return <SingleItem key={item.id} item={item} />;
       })}
     </div>
