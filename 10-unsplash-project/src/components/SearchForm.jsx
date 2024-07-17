@@ -6,6 +6,8 @@ function SearchForm() {
     console.log(searchValue);
   };
 
+  // console.log(import.meta.env.VITE_API_URL);
+
   return (
     <section>
       <h1>Unsplash Images</h1>
