@@ -1,15 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useGlobalContext } from "../context";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const KEY = import.meta.env.VITE_API_KEY;
-const url = `${API_URL}?client_id=${KEY}&query=monkey`;
+const url = `${API_URL}?client_id=${KEY}`;
 
 function Gallery() {
+  const { searchTerm } = useGlobalContext();
   const response = useQuery({
     queryKey: ["images"],
     queryFn: async () => {
-      const result = await axios.get(url);
+      const result = await axios.get(`${url}&query=${searchTerm}`);
 
       return result.data;
     },
