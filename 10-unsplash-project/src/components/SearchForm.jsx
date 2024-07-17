@@ -10,7 +10,7 @@ function SearchForm() {
 
   return (
     <section>
-      <h1>Unsplash Images</h1>
+      <h2 className="title">Unsplash Images</h2>
       <form className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
