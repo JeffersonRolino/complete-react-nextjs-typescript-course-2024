@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const KEY = import.meta.env.VITE_API_KEY;
-const url = `${API_URL}?client_id=${KEY}&query=cat`;
+const url = `${API_URL}?client_id=${KEY}&query=monkey`;
 
 function Gallery() {
   const response = useQuery({
@@ -15,12 +15,45 @@ function Gallery() {
     },
   });
 
-  console.log(response);
+  if (response.isLoading) {
+    return (
+      <section className="image-container">
+        <h4>Loading...</h4>
+      </section>
+    );
+  }
+
+  if (response.isError) {
+    return (
+      <section className="image-container">
+        <h4>There was an error...</h4>
+      </section>
+    );
+  }
+
+  const results = response.data.results;
+  if (results.length < 1) {
+    return (
+      <section className="image-container">
+        <h4>No results found...</h4>
+      </section>
+    );
+  }
 
   return (
-    <div>
-      <h2>Gallery</h2>
-    </div>
+    <section className="image-container">
+      {results.map((item) => {
+        const url = item?.urls?.regular;
+        return (
+          <img
+            src={url}
+            key={item.id}
+            alt={item.alt_description}
+            className="img"
+          />
+        );
+      })}
+    </section>
   );
 }
 
