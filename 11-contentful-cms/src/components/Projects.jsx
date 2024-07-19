@@ -1,3 +1,5 @@
+import "../fetchProjects";
+
 function Projects() {
   return (
     <div>
