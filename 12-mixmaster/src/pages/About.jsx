@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function About() {
   return (
     <div>
       <h1>About</h1>
-      <Link to="/">Home</Link>
+      <Outlet />
     </div>
   );
 }
