@@ -17,12 +17,10 @@ function About() {
 }
 
 const Wrapper = styled.div`
-  padding: 2rem;
-
   p {
     line-height: 2;
     color: var(--grey-500);
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 `;
 
