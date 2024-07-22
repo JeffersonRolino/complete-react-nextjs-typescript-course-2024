@@ -25,9 +25,36 @@ function Error() {
 }
 
 const Wrapper = styled.div`
-  h1 {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 90vw;
+    max-width: 600px;
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     color: var(--grey-500);
-    margin-top: 2rem;
+  }
+
+  a {
+    color: var(--primary-500);
+    text-transform: capitalize;
+    font-weight: 600;
   }
 `;
 
