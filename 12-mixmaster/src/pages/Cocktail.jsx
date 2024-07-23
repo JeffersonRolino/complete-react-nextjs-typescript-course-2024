@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import styled from "styled-components";
 
@@ -14,6 +14,9 @@ export const loader = async ({ params }) => {
 
 function Cocktail() {
   const { id, data } = useLoaderData();
+
+  // if (!data) return <h2>Something went wrong...</h2>;
+  if (!data) return <Navigate to="/" />;
 
   const singleDrink = data.drinks[0];
 
