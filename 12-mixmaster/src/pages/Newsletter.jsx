@@ -1,6 +1,6 @@
 function Newsletter() {
   return (
-    <form className="form">
+    <form className="form" method="POST">
       <h4 style={{ textAlign: "center", marginBottom: "2rem" }}>
         Our Newsletter
       </h4>
