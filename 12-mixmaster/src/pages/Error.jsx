@@ -18,7 +18,7 @@ function Error() {
 
   return (
     <Wrapper>
-      <h3>Something went wrong</h3>
+      <h3>{error.message}</h3>
     </Wrapper>
   );
 }
