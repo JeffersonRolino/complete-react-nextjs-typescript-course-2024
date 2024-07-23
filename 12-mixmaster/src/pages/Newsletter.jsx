@@ -1,6 +1,16 @@
+import { Form } from "react-router-dom";
+
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+  console.log(data);
+
+  return null;
+};
+
 function Newsletter() {
   return (
-    <form className="form" method="POST">
+    <Form className="form" method="POST">
       <h4 style={{ textAlign: "center", marginBottom: "2rem" }}>
         Our Newsletter
       </h4>
@@ -50,7 +60,7 @@ function Newsletter() {
       >
         submit
       </button>
-    </form>
+    </Form>
   );
 }
 
