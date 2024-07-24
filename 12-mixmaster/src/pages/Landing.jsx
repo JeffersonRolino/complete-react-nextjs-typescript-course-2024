@@ -17,13 +17,15 @@ const searchCocktailsQuery = (searchTerm) => {
   };
 };
 
-export const loader = async ({ request }) => {
-  const url = new URL(request.url);
+export const loader =
+  (queryClient) =>
+  async ({ request }) => {
+    const url = new URL(request.url);
 
-  const searchTerm = url.searchParams.get("search") || "";
+    const searchTerm = url.searchParams.get("search") || "";
 
-  return { searchTerm };
-};
+    return { searchTerm };
+  };
 
 function Landing() {
   const { searchTerm } = useLoaderData();
