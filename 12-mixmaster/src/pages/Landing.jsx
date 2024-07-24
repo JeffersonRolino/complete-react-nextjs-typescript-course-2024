@@ -24,6 +24,8 @@ export const loader =
 
     const searchTerm = url.searchParams.get("search") || "";
 
+    await queryClient.ensureQueryData(searchCocktailsQuery(searchTerm));
+
     return { searchTerm };
   };
 
