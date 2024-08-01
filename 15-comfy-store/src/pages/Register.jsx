@@ -6,7 +6,7 @@ function Register() {
     <section className="h-screen grid place-items-center">
       <Form
         method="POST"
-        className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4"
+        className="card w-96 p-8 bg-base-200 flex flex-col gap-y-4"
       >
         <h4 className="text-center text-3xl font-bold">Register</h4>
         <FormInput type="text" label="username" name="username" />
@@ -17,7 +17,10 @@ function Register() {
         </div>
         <p className="text-center">
           Already a member?
-          <Link to="/login" className="ml-2 link font-bold link-hover">
+          <Link
+            to="/login"
+            className="ml-2 link font-bold link-hover text-primary"
+          >
             login
           </Link>
         </p>
