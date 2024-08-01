@@ -1,7 +1,9 @@
+import { Hero } from "../components";
+
 function Landing() {
   return (
     <div>
-      <h1 className="text-4xl">Landing</h1>
+      <Hero />
     </div>
   );
 }
