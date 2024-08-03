@@ -1,5 +1,13 @@
+import ProductsGrid from "./ProductsGrid";
+import ProductsList from "./ProductsList";
+
 function ProductsContainer() {
-  return <div>Products Container</div>;
+  return (
+    <>
+      <ProductsList />
+      <ProductsGrid />
+    </>
+  );
 }
 
 export default ProductsContainer;
