@@ -1,17 +1,18 @@
 function FormInput({ label, name, type, defaultValue, size }) {
   return (
-    <label className="form-control">
-      <div className="label">
+    <div className="form-control">
+      <label htmlFor={name} className="label">
         <span className="label-text capitalize">{label}</span>
-      </div>
+      </label>
       <input
         type={type}
-        name={name}
+        id={name}
+        // name={name}
         defaultValue={defaultValue}
         placeholder="Type here"
         className={`input input-bordered ${size}`}
       />
-    </label>
+    </div>
   );
 }
 
