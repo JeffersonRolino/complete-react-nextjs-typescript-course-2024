@@ -18,7 +18,6 @@ function ProductsContainer() {
     }`;
   };
 
-  console.log(meta);
   return (
     <>
       {/* HEADER */}
