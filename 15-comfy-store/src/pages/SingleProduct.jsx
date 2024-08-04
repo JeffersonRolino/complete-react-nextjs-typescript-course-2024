@@ -32,6 +32,7 @@ function SingleProduct() {
     price,
     company,
     productColor,
+    amount,
   };
 
   const dispatch = useDispatch();
